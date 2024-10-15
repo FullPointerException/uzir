@@ -1,0 +1,33 @@
+* Jobs
+
+  Jobs split between 3 characters physical, arcane, and divine
+
+** Physical Jobs
+
+  - [[warrior.org][Warrior]]
+  - [[barbarian.org][Barbarian]]
+  - [[monk.org][Monk]]
+  - [[thief.org][Theif]]
+  - [[hunter.org][Hunter]]
+  - [[assassin.org][Assassin]]
+  - [[spellblade.org][Spellblade]]
+  - [[knight.org][Knight]]
+  - [[ranger.org][Ranger]]
+
+** Arcane Jobs
+
+  - [[mage.org][Mage]]
+  - [[sorceror.org][Sorceror]]
+  - [[bard.org][Bard]]
+  - [[summoner.org][Summoner]]
+  - [[alchemist.org][Alchemist]]
+  - [[artificer.org][Artificer]]
+
+** Divine Jobs
+
+  - [[priest.org][Priest]]
+  - [[oracle.org][Oracle]]
+  - [[druid.org][Druid]]
+  - [[witch.org][Witch]]
+  - [[warlock.org][Warlock]]
+  - [[psychic.org][Psychic]]

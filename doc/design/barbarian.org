@@ -1,0 +1,5 @@
+* Barbarian
+
+  Unlock: Warrior with Clubs and Throwing
+
+** Specializations

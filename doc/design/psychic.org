@@ -1,0 +1,5 @@
+* Psychic
+
+  Unlocked at start
+
+** Specializations

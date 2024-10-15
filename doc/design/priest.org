@@ -1,0 +1,21 @@
+* Priest
+
+  Unlocked at start
+
+** Specializations
+  - Light
+  - Shadow
+  - Nature
+  - Luck
+  - Radiant
+  - Infernal
+  - Knowledge
+  - Sea
+  - Harvest
+  - Spring
+  - Summer
+  - Autumn
+  - Winter
+  - Life
+  - Death
+

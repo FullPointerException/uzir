@@ -1,0 +1,13 @@
+* Warrior
+
+  Unlocked at start
+
+** Specializations
+  - Shield
+  - 1H Swords
+  - 2H Swords
+  - Dual wield
+  - Bows
+  - Crossbows
+  - Clubs
+  - Throwing

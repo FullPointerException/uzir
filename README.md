@@ -1,2 +1,0 @@
-# uzir
-UZIR

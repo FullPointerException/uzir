@@ -1,0 +1,13 @@
+* Mage
+
+  Unlocked at start
+
+** Specializations
+  - Fire
+  - Ice
+  - Lightning
+  - Acid
+  - Sound
+  - Buff
+  - Debuff
+  - Minions

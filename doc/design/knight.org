@@ -1,0 +1,5 @@
+* Knight
+
+  Unlock: Have a Priest cast a spell on a Warrior with Shield specialization's shield and block an attack
+
+** Specializations

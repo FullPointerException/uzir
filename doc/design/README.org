@@ -1,0 +1,3 @@
+* Design Notes
+
+  A place to capture all design notes, decisions, etc. There's also an [[unsorted.org]] file for any kind of scratch notes that need to be put in a better place later

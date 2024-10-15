@@ -1,0 +1,3 @@
+* Sorceror
+
+  Unlock: Mage with Fire, Ice, Thunder, and Acid specializations all Lv >= 10

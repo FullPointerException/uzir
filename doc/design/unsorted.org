@@ -1,0 +1,41 @@
+* Misc notes no sort elsewhere
+
+3 characters: physical, arcane, divine
+
+3 resources: HP, MP, energy
+
+
+Damage Types:
+  - Physical / Projectile: Crush, Cut, Poke
+  - Elemental: Fire, Ice, Acid, Lightning
+  - Other: Sonic, Radiant, Infernal
+
+
+On level up, get 3 random talents. Initially all ???
+
+** Stats
+  - Strength
+  - Skill
+  - Speed
+  - Health
+  - Intelligence
+  - Wisdom
+  - Luck
+  - Spirit
+
+** Formulas
+  - Hits: 50% base + Attacker Hit % - Total Miss %
+  - Strength: + to Melee Hit, + to Melee Crit %
+  - Skill: + to Ranged Hit, + to Melee Crit %, + to Ranged Crit %
+  - Weapons have accuracy modifier
+  - Luck: + to Melee Hit, + to Ranged Hit, + to Dodge, + to Crit Avoid
+  - Distance: Accuracy modifier for ranged weapons
+  - Speed: + to Dodge
+  - Armor: + to Block
+  - Typically, 1 point in a stat => 0.1% bonus, with luck at 0.01%
+  - HP: Affected by job, level, Health
+  - MP: Affected by job, level, Spirit
+
+*** Damage Formula
+  - (Base Damage + Base Bonus) * Percent Bonus + Flat Bonus
+  - "Base Bonus" and "Base Damage" affected by "Percent Bonuses", Flat Bonus are not

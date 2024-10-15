@@ -1,0 +1,5 @@
+* Summoner
+
+  Unlock: Mage with Minions specialization level >= 10
+
+** Specializations

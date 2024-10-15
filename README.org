@@ -1,0 +1,26 @@
+* uzir
+
+Unnamed Zig Incremental RPG
+
+** Running
+
+** Building
+
+I use =just= to manage workflows.
+
+#+begin_src sh
+
+  just build
+
+#+end_src
+
+** Software
+
+*** Why Zig
+
+    Because I wanted to make something in zig.
+
+*** Dependencies
+
+- Raylib bindings: github.com/Not-Nik/raylib-zig
+

@@ -1,0 +1,5 @@
+* Spellblade
+
+  Unlock: Have Mage ally cast a buff spell on a Warrior with Dual Wielding specialization's sword and hit an enemy
+
+** Specializations
