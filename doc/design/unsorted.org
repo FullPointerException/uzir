@@ -39,3 +39,35 @@ On level up, get 3 random talents. Initially all ???
 *** Damage Formula
   - (Base Damage + Base Bonus) * Percent Bonus + Flat Bonus
   - "Base Bonus" and "Base Damage" affected by "Percent Bonuses", Flat Bonus are not
+
+** Incremental
+
+*** Perks
+  Perks are picked up at start and every level up from a group of 3. Perks that have never been chosen are displayed as =???= until picked. Perks are weighted by type based on level, how many perks of that type has been chosen, and how many times that specific perk has been chosen.
+
+  Perks have multiple types:
+    - General
+    - Heritage
+    - Background
+    - Skill
+    - Job
+    - Specialization
+
+Heritage and Background perks get tracked by Background. At certain level milesones, they begin applying beyond that specific Background.
+General, Skill, Job, and Specialization perks get tracked by Job Specialization. At certain level milestones, they begin applying beyond that specific Specialization.
+Perks all have a minimum level before incremental perks are applied
+
+General Milestnes:
+  - 10: Apply to Job at 1% per max level
+  - 30: Apply to Character at 1% per max level
+
+Skill Milestones:
+  - 20: Apply to Job at 1% per max level
+  - 40: Apply to Character at 1% per max level
+
+Job Milestones:
+  - 50: Apply to Character at 0.1% per max level
+
+Specialization Milestones:
+  - 30: Apply to Job at 0.1% per max level
+  - 50: Apply to Character at 0.1% per max level
