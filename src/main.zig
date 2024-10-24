@@ -7,6 +7,10 @@ const raylib = @import("raylib");
 
 const MainState = enum { logo, main_menu, town, battle, rewards };
 
+pub const GameState = struct {
+    state: MainState = MainState.logo,
+};
+
 pub fn main() !void {
     // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
     std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
@@ -26,16 +30,16 @@ pub fn main() !void {
     defer raylib.closeWindow();
     raylib.setTargetFPS(60);
 
-    var state = MainState.logo;
+    var gamestate = GameState{};
 
     while (!raylib.windowShouldClose()) {
-        state = updateFrame(state);
-        drawFrame(state);
+        try updateFrame(&gamestate);
+        drawFrame(&gamestate);
     }
 }
 
-pub fn updateFrame(s: MainState) MainState {
-    const newState = switch (s) {
+pub fn updateFrame(game: *GameState) !void {
+    const newState = switch (game.state) {
         MainState.logo => MainState.main_menu,
         MainState.main_menu => MainState.town,
         MainState.town => MainState.battle,
@@ -43,16 +47,16 @@ pub fn updateFrame(s: MainState) MainState {
         MainState.rewards => MainState.logo,
     };
 
-    return newState;
+    game.state = newState;
 }
 
-pub fn drawFrame(s: MainState) void {
+pub fn drawFrame(game: *GameState) void {
     raylib.beginDrawing();
     defer raylib.endDrawing();
 
     raylib.clearBackground(raylib.Color.white);
 
-    switch (s) {
+    switch (game.state) {
         MainState.logo => raylib.drawText("uzir", 30, 30, 10, raylib.Color.gray),
         MainState.main_menu => raylib.drawText("Uzir", 30, 30, 10, raylib.Color.gray),
         MainState.town => raylib.drawText("uZir", 30, 30, 10, raylib.Color.gray),
