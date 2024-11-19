@@ -1,0 +1,8 @@
+* Spells
+
+** Common properties
+
+    - Damage type
+    - Is Reflectable
+    - Is Reversed By Undead
+    - Spell Tier

@@ -7,13 +7,19 @@ const raylib = @import("raylib");
 
 const MainState = enum { logo, main_menu, town, battle, rewards };
 
+const CmdLineArgs = struct {
+    window_width: i32 = 640,
+    window_height: i32 = 480,
+    target_fps: i32 = 60,
+};
+
 pub const GameState = struct {
     state: MainState = MainState.logo,
 };
 
 pub fn main() !void {
-    // Prints to stderr (it's a shortcut based on `std.io.getStdErr()`)
-    std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
+    const cmd_line_args = try readCmdLineArgs();
+    // TODO handle errors nicely
 
     // stdout is for the actual output of your application, for example if you
     // are implementing gzip, then only the compressed bytes should be sent to
@@ -26,9 +32,9 @@ pub fn main() !void {
 
     try bw.flush(); // Don't forget to flush!
 
-    raylib.initWindow(400, 200, "test");
+    raylib.initWindow(cmd_line_args.window_width, cmd_line_args.window_height, "UZIR");
     defer raylib.closeWindow();
-    raylib.setTargetFPS(60);
+    raylib.setTargetFPS(cmd_line_args.target_fps);
 
     var gamestate = GameState{};
 
@@ -63,6 +69,33 @@ pub fn drawFrame(game: *GameState) void {
         MainState.battle => raylib.drawText("uzIr", 30, 30, 10, raylib.Color.gray),
         MainState.rewards => raylib.drawText("uziR", 30, 30, 10, raylib.Color.gray),
     }
+}
+
+// TODO better errors
+pub fn readCmdLineArgs() !CmdLineArgs {
+    var alloc = std.heap.GeneralPurposeAllocator(.{}){};
+    defer _ = alloc.deinit();
+    var args = try std.process.argsWithAllocator(alloc.allocator());
+    defer args.deinit();
+
+    var parsed_args = CmdLineArgs{};
+
+    // Burn the fisrt arg since it's the call path
+    _ = args.next();
+
+    //var target_fps: u8 = 60;
+
+    while (args.next()) |arg| {
+        if (std.mem.eql(u8, arg, "--size")) {
+            parsed_args.window_width = try std.fmt.parseInt(i32, args.next().?, 10);
+            parsed_args.window_height = try std.fmt.parseInt(i32, args.next().?, 10);
+        }
+        if (std.mem.eql(u8, arg, "--fps")) {
+            parsed_args.target_fps = try std.fmt.parseInt(i32, args.next().?, 10);
+        }
+    }
+
+    return parsed_args;
 }
 
 //test "simple test" {
